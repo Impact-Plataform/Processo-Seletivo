@@ -38,11 +38,7 @@
   ```
 * Preencher /etc/essay.txt com um texto do pq vc gostaria de entrar na Plataforma
 * Run app
-  * Abra um terminal e execute:
-  ```
-  ./server.sh
-  ```
-  * Abra outra aba de terminal e execute:
+  * Abra o terminal e execute:
   ```
   ./run.sh
   ```
