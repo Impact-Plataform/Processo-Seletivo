@@ -1,3 +1,4 @@
+from http import HTTPStatus
 import json
 from ulid import ULID
 from os.path import exists
@@ -18,7 +19,7 @@ print(f"SEU ID {my_id}")
 headers = {'id': my_id}
 
 # get public key to encrypt data
-key_url = 'http://localhost:5000/key'
+key_url = '## URL PARA BAIXAR A CHAVE DE CRIPTOGRAFIA ##'
 key_file = "./etc/serverKey.pub"
 
 if not exists(key_file):
@@ -47,9 +48,12 @@ body = {
 }
 
 # send data
-post_url = 'http://localhost:5000/apply'
+post_url = '## URL PARA ENVIAR O TESTE ##'
 
 print(f"Request:\n\tHeaders={headers}\n\tBody: {body}")
 
 response = requests.post(post_url, json=body, headers=headers)
 print(f"HTTP Status Code: {response.status_code}")
+
+if response.status_code == HTTPStatus.OK:
+    print('Legal, seu teste foi aceito! aguarde um contato do pessoal da plataforma agora!')
