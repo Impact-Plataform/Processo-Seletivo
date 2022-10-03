@@ -56,4 +56,4 @@ response = requests.post(post_url, json=body, headers=headers)
 print(f"HTTP Status Code: {response.status_code}")
 
 if response.status_code == HTTPStatus.OK:
-    print('Legal, seu teste foi aceito! aguarde um contato do pessoal da plataforma agora!')
+    print('Legal, seu teste foi aceito! aguarde um contato do pessoal da plataforma!')
