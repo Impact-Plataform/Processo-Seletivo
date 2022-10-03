@@ -16,7 +16,7 @@ Siga as intruções do site oficial do git e instale em seu computador essa ferr
 
 Primeiro crie uma pasta/diretório em algum local do seu computador, recomendamos usar uma pasta dedicada para isso, com um nome intuítivo, como "git", por exemplo.
 
-Execute um comando de cada vez no seu terminal/prompt de comando para conseguir baixar todos os arquivos do teste
+Execute um <b>comando de cada vez</b> no seu terminal/prompt de comando para conseguir baixar todos os arquivos do teste
 #### Windows: 
 ```  
 cd %HOMEPATH%
@@ -36,7 +36,7 @@ cd Processo-Seletivo/
 ```
 
 ### Vamos alterar alguns pontos para fazer esse programa funcionar?
-Usando o seu editor de texto/códigos preferidos, vá até o arquivo <b>app/client.py</b>, é nele que precisamos colocar algumas informações importantes!
+Usando o seu [editor de texto/códigos preferido](https://code.visualstudio.com/), vá até o arquivo <b>app/client.py</b>, é nele que precisamos colocar algumas informações importantes!
 
 Você precisa alterar algumas linhas específicas para sabermos quem é você e saber se você consegue seguir corretamente essas instruções:
 
@@ -68,4 +68,4 @@ python3 app/client.py
 
 Agora é só aguardar que assim que possível iremos entrar em contato!
 
-Muita sorte aí! quqlquer dúvida nos procurem por favor!!
+Muita sorte aí! qualquer dúvida nos procurem por favor!!
