@@ -53,8 +53,8 @@ Após alterar o cógigo, ainda há um passo importante nesse teste, queremos sab
 ### Agora vamos tentar executar esse código aí
 #### Primeiro, precisamos instalar o Python3
 Siga as instruções no site oficial do python que tudo vai dar certo!
-* [Windows](https://git-scm.com/download/windows)
-* [Linux](https://git-scm.com/download/linux)
+* [Windows](https://python.org.br/instalacao-windows/)
+* [Linux](https://python.org.br/instalacao-linux/)
 
 Com o python instalado, vamos preparar o ambiente para executar esse teste, para isso precisamos executar o pip (gerenciador de pacotes do python), no diretório onde você baixou os arquivos (fez o clone, lembra?), execute o seguinte comando:
 ```
