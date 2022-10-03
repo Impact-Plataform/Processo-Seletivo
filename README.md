@@ -14,13 +14,15 @@ Siga as intruções do site oficial do git e instale em seu computador essa ferr
 ### Agora clone o repositório
 "Clonar o repositório" é como usualmente dizemos quando queremos pegar um código fonte e baixar para o nosso computador, é um passo importante do nosso teste:
 
-Primeiro crie uma pasta/diretório em algum local do seu computador, recomendamos usar uma pasta dedicada para isso, com um nome intuítivo, como "git", por exemplo:
+Primeiro crie uma pasta/diretório em algum local do seu computador, recomendamos usar uma pasta dedicada para isso, com um nome intuítivo, como "git", por exemplo.
+
+Execute um comando de cada vez no seu terminal/prompt de comando para conseguir baixar todos os arquivos do teste
 #### Windows: 
 ```  
 cd %HOMEPATH%
 mkdir git
 cd git
-git clone git@github.com:Impact-Plataform/Processo-Seletivo.git
+git clone http://github.com/Impact-Plataform/Processo-Seletivo.git
 cd Processo-Seletivo/ 
 ```
 
@@ -29,12 +31,14 @@ cd Processo-Seletivo/
 cd ~
 mkdir git
 cd git
-git clone git@github.com:Impact-Plataform/Processo-Seletivo.git
+git clone http://github.com/Impact-Plataform/Processo-Seletivo.git
 cd Processo-Seletivo/ 
 ```
 
 ### Vamos alterar alguns pontos para fazer esse programa funcionar?
-No arquivo <b>app/client.py</b> você precisa alterar algumas linhas específicas para sabermos quem é você e saber se você consegue seguir essas instruções:
+Usando o seu editor de texto/códigos preferidos, vá até o arquivo <b>app/client.py</b>, é nele que precisamos colocar algumas informações importantes!
+
+Você precisa alterar algumas linhas específicas para sabermos quem é você e saber se você consegue seguir corretamente essas instruções:
 
 |Linha|Descrição|Valor no arquivo|Novo valor|
 |:-:|:-:|:-:|:-:|
