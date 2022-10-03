@@ -16,7 +16,7 @@ Caso queira saber mais sobre essa poderosa ferramenta, o artigo da [Wikipedia](h
 ### Agora clone o repositório
 "Clonar o repositório" é como usualmente dizemos quando queremos pegar um código fonte e baixar para o nosso computador, é um passo importante do nosso teste.
 
-Primeiro crie uma pasta/diretório em algum local do seu computador, recomendamos usar uma pasta dedicada para isso, com um nome intuítivo, como "git", por exemplo, é recomendado que essa pasta fique em algum lugar de fácil acesso para o seu usuário, ou em seu home (<b>c:\users\\<SEU USUÁRIO>\git</b> no Windows ou <b>\home\\<SEU USUÁRIO>\git</b> no Linux)
+Primeiro crie uma pasta/diretório em algum local do seu computador, recomendamos usar uma pasta dedicada para isso, com um nome intuítivo, como "git", por exemplo, é recomendado que essa pasta fique em algum lugar de fácil acesso para o seu usuário, ou em seu home (<b>c:\users\\<SEU USUÁRIO>\git</b> no Windows ou <b>\home\\<SEU USUÁRIO>\git</b> no Linux).
 
 Execute um <b>comando de cada vez</b> no seu terminal/prompt de comando para conseguir baixar todos os arquivos do teste
 #### Windows: 
@@ -35,6 +35,19 @@ mkdir git
 cd git
 git clone http://github.com/Impact-Plataform/Processo-Seletivo.git
 cd Processo-Seletivo/ 
+```
+
+Fique atento em qual pasta você está no momento, os comandos a seguir só irão funcionar se forem executados no local correto.
+
+No Windows, o caminho aparece na aprte esquerda do prompt de comando e deve ser algo como:
+```
+C:\Users\USUARIO\git\Processo-Selevito>
+```
+
+No Linux, isso varia um pouco de acordo com o tipo de terminal que você está usando, mas exsite um comando que pode te ajudar aqui, o <b>pwd</b>, veja como deve ser a saída desse comando:
+```
+$> pwd
+/home/USUARIO/git/Processo-Seletivo
 ```
 
 ### Vamos alterar alguns pontos para fazer esse programa funcionar?
