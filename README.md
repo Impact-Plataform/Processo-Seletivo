@@ -6,15 +6,17 @@ Nosso objetivo com esse teste é saber se vc está preparado para começar a est
 Siga as instruções abaixo e caso você consiga fazer esse pequeno código funcionar, ele irá nos enviar sua inscrição e vamos conversar!
 
 ## Instruções
-### Instale o git 
+### Instale o [git ](https://pt.wikipedia.org/wiki/Git)
 Siga as intruções do site oficial do git e instale em seu computador essa ferramenta, ela é necessária para que você tenha acesso ao programa de teste
 * [Windows](https://git-scm.com/download/windows)
 * [Linux](https://git-scm.com/download/linux)
 
-### Agora clone o repositório
-"Clonar o repositório" é como usualmente dizemos quando queremos pegar um código fonte e baixar para o nosso computador, é um passo importante do nosso teste:
+Caso queira saber mais sobre essa poderosa ferramenta, o artigo da [Wikipedia](https://pt.wikipedia.org/wiki/Git) pode dar uma boa noção, mas em poucas palavras, é uma ferramenta largamente utilizada no mercado para controle de versão e repositório de arquivos fonte.
 
-Primeiro crie uma pasta/diretório em algum local do seu computador, recomendamos usar uma pasta dedicada para isso, com um nome intuítivo, como "git", por exemplo.
+### Agora clone o repositório
+"Clonar o repositório" é como usualmente dizemos quando queremos pegar um código fonte e baixar para o nosso computador, é um passo importante do nosso teste.
+
+Primeiro crie uma pasta/diretório em algum local do seu computador, recomendamos usar uma pasta dedicada para isso, com um nome intuítivo, como "git", por exemplo, é recomendado que essa pasta fique em algum lugar de fácil acesso para o seu usuário, ou em seu home (<b>c:\users\<SEU USUÁRIO>\git</b> no Windows ou <b>\home\<SEU USUÁRIO>\git</b> no Linux)
 
 Execute um <b>comando de cada vez</b> no seu terminal/prompt de comando para conseguir baixar todos os arquivos do teste
 #### Windows: 
