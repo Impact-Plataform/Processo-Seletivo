@@ -5,7 +5,7 @@ Nosso objetivo com esse teste é saber se vc está preparado para começar a est
 
 Siga as instruções abaixo e caso você consiga fazer esse pequeno código funcionar, ele irá nos enviar sua inscrição e vamos conversar!
 
-Caso tenha alguma dificuldade sobre o que é um [terminal](http://impactwiki.duckdns.org/pt-br/conteudos/linux/terminal) (Linux) ou um prompt de comando (Windows), tente entender como realizar as operações básicas primeiro, como executar comando ou navegar pelos diretórios.
+Caso tenha alguma dificuldade sobre o que é um [terminal](http://impactwiki.duckdns.org/pt-br/conteudos/linux/terminal) ([Linux](http://impactwiki.duckdns.org/pt-br/conteudos/linux/historia)) ou um prompt de comando (Windows), tente entender como realizar as operações básicas primeiro, como executar comando ou navegar pelos diretórios.
 
 ## Instruções
 ### Instale o [git ](https://pt.wikipedia.org/wiki/Git)
