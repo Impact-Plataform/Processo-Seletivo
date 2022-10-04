@@ -24,7 +24,7 @@ Execute um <b>comando de cada vez</b> no seu terminal/prompt de comando para con
 #### Windows: 
 ```  
 cd %HOMEPATH%
-mkdir git
+md git
 cd git
 git clone http://github.com/Impact-Plataform/Processo-Seletivo.git
 cd Processo-Seletivo/ 
