@@ -5,7 +5,27 @@ Nosso objetivo com esse teste é saber se vc está preparado para começar a est
 
 Siga as instruções abaixo e caso você consiga fazer esse pequeno código funcionar, ele irá nos enviar sua inscrição e vamos conversar!
 
+## DICAS
+### Terminal
 Caso tenha alguma dificuldade sobre o que é um [terminal](http://impactwiki.duckdns.org/pt-br/conteudos/linux/terminal) ([Linux](http://impactwiki.duckdns.org/pt-br/conteudos/linux/historia)) ou um prompt de comando (Windows), tente entender como realizar as operações básicas primeiro, como executar comando ou navegar pelos diretórios.
+
+Mais informações sobre como operar um terminal Linux podem ser encontradas nesse [link](https://www.techtudo.com.br/noticias/2012/04/aprenda-os-comandos-basicos-do-linux.ghtml)
+
+### Um computador (ambiente) para usar no teste
+No teste, é pedido que sejam instalados alguns componentes no computador. Caso não queira instalar nada em seu computador, você pode tentar usar um ambiente web (um computador com linux rodando e acessível pelo seu browser) usando o [KillerCoda](https://killercoda.com/playgrounds/scenario/ubuntu). Com esse link você terá acesso a um computador com linux totalmente funcional por cerca de 60 minutos.
+
+### Um editor de textos (fontes) para usar no teste
+Recomendamos o uso do [Visual Studio Code](https://code.visualstudio.com/), que é um editor de textos e códigos muito completo, mas dependendo de como você escolher realizar esse teste talvez não tenha acesso a ele diretamente e pode querer tentar um editor diretamente no terminal, nesse caso, recomendamos o uso do [micro](https://micro-editor.github.io/).Para instalar esse ótimo editor, no <b>Linux</b>, use o seguinte comando:
+
+```
+curl https://getmic.ro | bash
+```
+
+#### Comandos importantes do micro editor
+* CTRL + S: Salva o documento
+* CTRL + Q: Sair do editor
+
+No <b>windows</b>, você pode usar o notepad se preferir para editar os arquivos
 
 ## Instruções
 ### Instale o [git ](https://pt.wikipedia.org/wiki/Git)
@@ -53,19 +73,22 @@ $> pwd
 ```
 
 ### Vamos alterar alguns pontos para fazer esse programa funcionar?
-Usando o seu [editor de texto/códigos preferido](https://code.visualstudio.com/), vá até o arquivo <b>app/client.py</b>, é nele que precisamos colocar algumas informações importantes!
+Usando o seu [editor de texto/códigos preferido](https://code.visualstudio.com/), vá até o arquivo client.py, que está na pasta app, dentro do repositório que você acabou de baixar (<b>app/client.py</b>), é nele que precisamos colocar algumas informações importantes!
 
 Você precisa alterar algumas linhas específicas para sabermos quem é você e saber se você consegue seguir corretamente essas instruções:
 
 |Linha|Descrição|Valor no arquivo|Novo valor|
-|:-:|:-:|:-:|:-:|
-|22|Caminho para buscar a chave de criptografia|key_url = '## URL PARA BAIXAR A CHAVE DE CRIPTOGRAFIA ##'|key_url = 'http://impact-server.com/key'|
-|38|Precisamos do seu nome|'name': "SEU NOME",|'name': "fulano afim de estudar",|
-|39|Precisamos do seu e-mail|'email': "SEU EMAIL",|'email': "fulano@email.com",|
-|34|Precisamos do seu telefone|'phone': "SEU TELEFONE COM DDD",|'phone': "(21) 98888-7777",|
-|51|Caminho para que esse programa consiga nos enviar os resultados e seus dados|post_url = '## URL PARA ENVIAR O TESTE ##'|post_url = 'http://impact-server.com/apply'|
+|:-:|:--|:--|:--|
+|**28**|Caminho para buscar a chave de criptografia|```key_url = '## URL PARA BAIXAR A CHAVE DE CRIPTOGRAFIA ##'```|```key_url = 'http://impact-server.com/key'```|
+|**55**|Precisamos do seu nome|```'name': "SEU NOME",```|```'name': "fulano afim de estudar",```|
+|**56**|Precisamos do seu e-mail|```'email': "SEU EMAIL",```|```'email': "fulano@email.com",```|
+|**57**|Precisamos do seu telefone|```'phone': "SEU TELEFONE COM DDD",```|```'phone': "(21) 98888-7777",```|
+|**7**0|Caminho para que esse programa consiga nos enviar os resultados e seus dados|```post_url = '## URL PARA ENVIAR O TESTE ##'```|```post_url = 'http://impact-server.com/apply'```|
 
 Após alterar o cógigo, ainda há um passo importante nesse teste, queremos saber de você, por que quer estudar conosco, nos conte quais razões te trouxeram aqui, para isso você precisa escrever tudo o que achar relevante no arquivo <b>etc/essay.txt</b> no diretório da aplicação. Note que sem isso a coisa toda não vai funcionar
+
+#### Dica
+Não se esqueça de salvar os arquivos ANTES de tentar executar os programas
 
 ### Agora vamos tentar executar esse código aí
 #### Primeiro, precisamos instalar o Python3
