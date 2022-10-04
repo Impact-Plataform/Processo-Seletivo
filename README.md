@@ -15,7 +15,7 @@ Mais informações sobre como operar um terminal Linux podem ser encontradas nes
 No teste, é pedido que sejam instalados alguns componentes no computador. Caso não queira instalar nada em seu computador, você pode tentar usar um ambiente web (um computador com linux rodando e acessível pelo seu browser) usando o [KillerCoda](https://killercoda.com/playgrounds/scenario/ubuntu). Com esse link você terá acesso a um computador com linux totalmente funcional por cerca de 60 minutos.
 
 ### Um editor de textos (fontes) para usar no teste
-Recomendamos o uso do [Visual Studio Code](https://code.visualstudio.com/), que é um editor de textos e códigos muito completo, mas dependendo de como você escolher realizar esse teste talvez não tenha acesso a ele diretamente e pode querer tentar um editor diretamente no terminal, nesse caso, recomendamos o uso do [micro](https://micro-editor.github.io/).Para instalar esse ótimo editor, no <b>Linux</b>, use o seguinte comando:
+Recomendamos o uso do [Visual Studio Code](https://code.visualstudio.com/), que é um editor de textos e códigos muito completo, mas dependendo de como você escolher realizar esse teste talvez não tenha acesso a ele diretamente e pode querer tentar um editor diretamente no terminal, nesse caso, recomendamos o uso do [micro](https://micro-editor.github.io/). Para instalar esse ótimo editor, no <b>Linux</b>, use o seguinte comando:
 
 ```
 curl https://getmic.ro | bash
