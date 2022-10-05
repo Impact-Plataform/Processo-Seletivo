@@ -93,8 +93,8 @@ Não se esqueça de salvar os arquivos ANTES de tentar executar os programas
 ### Agora vamos tentar executar esse código aí
 #### Primeiro, precisamos instalar o Python3
 Siga as instruções no site oficial do python que tudo vai dar certo!
-* [Windows](https://python.org.br/instalacao-windows/)
-* [Linux](https://python.org.br/instalacao-linux/)
+* [Windows](https://python.org.br/instalacao-windows/): No Windows 10 ou 11, caso tenha dificuldades, é possível instalar o Python pela loja de aplicativos do Windows (Microsoft Store) sem problemas
+* [Linux](https://python.org.br/instalacao-linux/): A Maioria das distribuições já possui python por padrão, mas siga as instruções do site.
 
 Com o python instalado, vamos preparar o ambiente para executar esse teste, para isso precisamos executar o pip (gerenciador de pacotes do python), no diretório onde você baixou os arquivos (fez o clone, lembra?), execute o seguinte comando:
 ```
