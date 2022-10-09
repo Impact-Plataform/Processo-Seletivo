@@ -7,6 +7,9 @@ from cripto import CriptoServer
 from http import HTTPStatus
 
 app = Flask(__name__)
+
+app.run(ssl_context='adhoc')
+
 key_path = './keys'
 cripto = CriptoServer(key_path)
 
