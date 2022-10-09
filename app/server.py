@@ -6,7 +6,7 @@ from flask import Flask, request, send_file
 from cripto import CriptoServer
 from http import HTTPStatus
 
-app = Flask(__name__, ssl_context='adhoc')
+app = Flask(__name__)
 
 key_path = './keys'
 cripto = CriptoServer(key_path)
