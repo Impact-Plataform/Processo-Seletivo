@@ -2,8 +2,8 @@ import json
 from datetime import datetime
 from fileinput import filename
 
-from flask import Flask, request, send_file
-from cripto import CriptoServer
+from flask import Flask, request, send_file, redirect
+from cripto import CriptoServer, SymmetricCripto
 from http import HTTPStatus
 
 app = Flask(__name__)
@@ -13,17 +13,20 @@ cripto = CriptoServer(key_path)
 
 @app.route('/')
 def echo():
-    return {
-               'timestamp': datetime.now()
-           }, HTTPStatus.OK
-
+    return redirect('https://github.com/Impact-Plataform/ingress-test', code=302)
+           
 @app.route('/apply', methods=['POST'])
 def post_apply():
     try:
         id = request.headers['id']
-        apply = request.json['apply']
-
-        info = json.loads(cripto.decrypt(apply))
+        info = {}
+        
+        info['name'] = cripto.decrypt(request.json['name'])
+        info['email'] = cripto.decrypt(request.json['email'])
+        info['phone'] = cripto.decrypt(request.json['phone'])
+        info['essay'] = SymmetricCripto.decrypt(id, request.json['essay'])
+        
+        print(f"/apply -> Receved: {json.dumps(info)}")
 
         now = datetime.now().strftime('%Y%m%d%H%M%S')
         file_name = f"./etc/apply_{id}_{now}"
@@ -33,7 +36,7 @@ def post_apply():
     except Exception as e:
         print(f"/apply -> Exception: {str(e)}")
         return {
-                   'msg': e,
+                   'msg': str(e),
                    'timestamp': datetime.now()
                }, HTTPStatus.UNPROCESSABLE_ENTITY
 

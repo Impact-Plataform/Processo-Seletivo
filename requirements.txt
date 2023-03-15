@@ -1,5 +1,6 @@
 python-ulid
-requests
-cryptography
-flask
-pyopenssl
+requests==2.28.2
+cryptography==39.0.2
+Flask==2.2.3
+Flask-Mail
+pyopenssl==23.0.0

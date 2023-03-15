@@ -7,6 +7,11 @@ import os
 from cryptography.hazmat.primitives import serialization, hashes
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.backends import default_backend
+from cryptography.exceptions import AlreadyFinalized
+from cryptography.exceptions import InvalidTag
+from cryptography.exceptions import UnsupportedAlgorithm
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
 
 class CriptoServer:
@@ -57,7 +62,7 @@ class CriptoServer:
     def decrypt(self, message: str):
         base64_bytes = message.encode('ascii')
         message_bytes = base64.b64decode(base64_bytes)
-        return self._key.decrypt(message_bytes, self._padding).decode('ascii')
+        return self._key.decrypt(message_bytes, self._padding).decode('utf-8')
 
     def get_private(self):
         return self._key
@@ -97,7 +102,7 @@ class CriptoClient:
         )
 
     def encrypt(self, message: str):
-        encrypt = self._key.encrypt(message.encode('ascii'), self._padding)
+        encrypt = self._key.encrypt(message.encode('utf-8'), self._padding)
         base64_bytes = base64.b64encode(encrypt)
         return base64_bytes.decode('ascii')
 
@@ -106,3 +111,59 @@ class CriptoClient:
 
     def get_path(self):
         return self._pu_path
+
+class SymmetricCripto:
+    def encrypt(secret_key: str, data: str):
+        try:            
+            secret_key
+            kdf = PBKDF2HMAC(
+                algorithm=hashes.SHA512(),
+                length=32,
+                salt=bytes(secret_key, 'utf-8'),
+                iterations=10000,
+                backend=default_backend()
+            )
+            key = kdf.derive(secret_key.encode('utf-8'))
+
+            nonce = secret_key.encode('utf-8')
+
+            aesgcm = AESGCM(key)
+            cipher_text_bytes = aesgcm.encrypt(
+                nonce=nonce,
+                data=data.encode('utf-8'),
+                associated_data=None
+            )
+            return base64.urlsafe_b64encode(cipher_text_bytes).decode('utf-8')
+
+        except (UnsupportedAlgorithm, AlreadyFinalized, InvalidTag) as e:
+            print(f"Symmetric encryption failed: {str(e)}")
+
+        return None
+
+    def decrypt(secret_key: str, data: str):
+        try:
+            salt = os.urandom(64)
+            kdf = PBKDF2HMAC(
+                algorithm=hashes.SHA512(),
+                length=32,
+                salt=bytes(secret_key, 'utf-8'),
+                iterations=10000,
+                backend=default_backend()
+            )
+            key = kdf.derive(secret_key.encode('utf-8'))
+
+            nonce = secret_key.encode('utf-8')
+
+            aesgcm = AESGCM(key)
+
+            decrypted_cipher_text_bytes = aesgcm.decrypt(
+                nonce=nonce,
+                data=base64.urlsafe_b64decode(data),
+                associated_data=None
+            )
+            return decrypted_cipher_text_bytes.decode('utf-8')
+        except (UnsupportedAlgorithm, AlreadyFinalized, InvalidTag) as e:
+            print(f"Symmetric decryption failed: {str(e)}")
+
+        return None
+        
